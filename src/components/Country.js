@@ -24,7 +24,7 @@ const CountryContentStyled = styled.div`
 const Country = ({ name, capital, population, flag }) => {
   return (
     <CountryStyled>
-      <img src={flag} alt={name} />
+      <img loading="lazy" src={flag} alt={name} />
       <CountryContentStyled>
         <h2>{name}</h2>
         <h4>
