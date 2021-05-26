@@ -1,11 +1,11 @@
 import Select from "components/Select";
-import Input from "components/Input";
+import Search from "components/InputSearch";
 
 const Filters = () => {
   return (
     <div>
       <Select />
-      <Input />
+      <Search />
     </div>
   );
 };
