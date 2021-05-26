@@ -1,6 +1,12 @@
+import styled from 'styled-components'
+
+const FooterStyled = styled.footer`
+  background-color: red;
+`
+
 const Footer = () => {
   return(
-    <div>Footer</div>
+    <FooterStyled>Footer</FooterStyled>
   )
 }
 
