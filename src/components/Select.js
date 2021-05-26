@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 
 const LabelStyled = styled.label`
   display: block;
@@ -28,7 +27,7 @@ const Select = () => {
     <div>
       <LabelStyled>Filter by region:</LabelStyled>
       <SelectStyled onChange={handleChange}>
-        <option value="">Filter by</option>
+        <option>Filter by</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>

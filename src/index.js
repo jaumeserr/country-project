@@ -10,6 +10,7 @@ import reducer from "./reducer";
 const initialState = {
   countryList: [],
   countryListByRegion: [],
+  countryListByName: [],
 };
 
 const store = createStore(reducer, initialState);
