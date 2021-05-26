@@ -21,15 +21,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <MainLayout>
-          <h2>This is my flag app</h2>
-          <Filters />
-          <CountryList />
-        </MainLayout>
-      </header>
-    </div>
+    <MainLayout>
+      <h2>This is my flag app</h2>
+      <Filters />
+      <CountryList />
+    </MainLayout>
   );
 };
 
