@@ -6,6 +6,7 @@ const CountryList = () => {
 
   return (
     <>
+      <h3>All countries</h3>
       {countryList.map((country) => (
         <Country key={country.alpha3Code} {...country} />
       ))}

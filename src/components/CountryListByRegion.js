@@ -6,6 +6,7 @@ const CountryListByRegion = () => {
 
   return (
     <>
+      <h3>Filtered Countries</h3>
       {countryListByRegion.map((country) => (
         <Country key={country.alpha3Code} {...country} />
       ))}

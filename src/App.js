@@ -17,7 +17,8 @@ function App() {
         payload: country,
       });
     });
-  }, [dispatch]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="App">
