@@ -6,37 +6,39 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 const InputStyled = styled.div`
-  width: 300px;
+  align-items: center;
+  background-color: white;
   border-radius: 5px;
   border: 1px solid #e8e8e8;
-  background-color: white;
   padding: 10px 35px 10px 10px;
   position: relative;
-  align-items: center;
+  width: 300px;
+  
   label {
     display: flex;
   }
+  
   input {
-    width: 100%;
-    outline: 0;
     border: none;
-    padding-left: 10px;
-    font-family: 'Philosopher', sans-serif;
     font-size: 15px;
+    outline: 0;
+    padding-left: 10px;
+    width: 100%;
   }
+  
   button {
+    background-color: transparent;
+    border: none;
     position: absolute;
     right: 10px;
     top: 10px;
-    background-color: transparent;
-    border: none;
   }
 `;
 
 const ClearStyled = styled(Delete)`
   color: black;
-  width: 20px;
   cursor: pointer;
+  width: 20px;
 `;
 
 const SearchStyled = styled(Search)`
