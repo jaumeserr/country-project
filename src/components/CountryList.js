@@ -15,11 +15,15 @@ const CountryList = () => {
 
   return (
     <>
-      {countryList.map((country) => (
-        <Link to={`/country/${country.alpha3Code}`}>
-          <Country key={country.alpha3Code} {...country} />
-        </Link>
-      ))}
+      {countryList.length !== 0 ? (
+        countryList.map((country) => (
+          <Link key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
+            <Country key={country.alpha3Code} {...country} />
+          </Link>
+        ))
+      ) : (
+        <div>Data not found</div>
+      )}
     </>
   );
 };
