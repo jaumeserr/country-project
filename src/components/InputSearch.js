@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Delete } from "@styled-icons/typicons";
 import { Search } from "@styled-icons/octicons";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
 const InputStyled = styled.div`
@@ -50,6 +50,7 @@ const InputSearch = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState("");
   const [clear, setClear] = useState(false);
+  const countries = useSelector(state => state.countryList)
 
   const handleChange = (evt) => {
     setValue(evt.target.value);
@@ -62,6 +63,10 @@ const InputSearch = () => {
 
   const clearInput = () => {
     setValue("");
+    dispatch({
+      type: "CLEAR_COUNTRY_FILTERS",
+      payload: [],
+    });
   };
 
   return (
