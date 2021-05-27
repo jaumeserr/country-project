@@ -27,7 +27,7 @@ const Select = () => {
     <div>
       <LabelStyled>Filter by region:</LabelStyled>
       <SelectStyled onChange={handleChange}>
-        <option>Filter by</option>
+        <option>All</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
