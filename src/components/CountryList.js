@@ -16,7 +16,7 @@ const CountryList = () => {
   return (
     <>
       {countryList.map((country) => (
-        <Link to={`/country/${country.alpha3Code}`}>
+        <Link key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
           <Country key={country.alpha3Code} {...country} />
         </Link>
       ))}
