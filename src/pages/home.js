@@ -1,10 +1,9 @@
-import "../App.css";
 import { useEffect } from "react";
-import getCountries from "services/getCountries";
 import { useDispatch } from "react-redux";
+
+import getCountries from "services/getCountries";
 import Filters from "components/Filters";
 import CountryList from "components/CountryList";
-
 import MainLayout from "components/layouts/MainLayout";
 
 const HomePage = () => {
@@ -22,8 +21,8 @@ const HomePage = () => {
 
   return (
     <MainLayout>
-      <h2>This is my flag app</h2>
-      <Filters />
+      {/* <h2>This is my flag app</h2>
+      <Filters /> */}
       <CountryList />
     </MainLayout>
   );

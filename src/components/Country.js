@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
-const CountryStyled = styled.div`
-  background-color: white;
+const CountryStyled = styled.article`
   border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
   color: black;
   font-weight: normal;
   line-height: 1.5;
-  margin-bottom: 20px;
   overflow: hidden;
-  width: 300px;
+  text-align: center;
+  background-color: white;
 
-  img {
+  .image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
     display: block;
     width: 100%;
   }
@@ -24,7 +26,7 @@ const CountryContentStyled = styled.div`
 const Country = ({ name, capital, population, flag, region }) => {
   return (
     <CountryStyled>
-      <img loading="lazy" src={flag} alt={name} />
+      <div className='image' style={{ backgroundImage: `url(${flag})`}}></div>
       <CountryContentStyled>
         <h2>{name}</h2>
         <h4>

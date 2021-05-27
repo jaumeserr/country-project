@@ -1,7 +1,8 @@
-import Country from "components/Country";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+import Country from "components/Country";
+import LinkStyled from './UI'
 const CountryList = () => {
   const countryList = useSelector((state) => {
     if(state.countryListByRegion.length !== 0) {
@@ -17,9 +18,9 @@ const CountryList = () => {
     <>
       {countryList.length !== 0 ? (
         countryList.map((country) => (
-          <Link key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
+          <LinkStyled key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
             <Country key={country.alpha3Code} {...country} />
-          </Link>
+          </LinkStyled>
         ))
       ) : (
         <div>Data not found</div>

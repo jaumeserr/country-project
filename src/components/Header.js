@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import Logo from "assets/logo.svg";
 
 const HeaderStyled = styled.header`
-  width: 100%;
   background-color: white;
   border-bottom: 1px solid #4d4d4d;
   box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
   .logo {
     flex: 1;
   }
@@ -21,18 +21,18 @@ const HeaderStyled = styled.header`
 `;
 
 const HeaderWrapper = styled.div`
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  align-items: center;
   display: flex;
   height: 70px;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 `;
 
 const LinkStyled = styled(Link)`
   color: #4d4d4d;
-  text-decoration: none;
   display: flex;
+  text-decoration: none;
 `;
 
 const Header = () => {
