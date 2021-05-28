@@ -19,7 +19,7 @@ const CountryList = () => {
       {countryList.length !== 0 ? (
         countryList.map((country) => (
           <LinkStyled key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
-            <Country key={country.alpha3Code} {...country} />
+            <Country {...country} />
           </LinkStyled>
         ))
       ) : (

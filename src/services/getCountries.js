@@ -3,8 +3,7 @@ export default function getCountries() {
     .then((res) => res.json())
     .then((data) => {
       const countryData = data.map((country) => {
-        const { name, capital, population, flag, alpha3Code, region } = country;
-        return { name, capital, population, flag, alpha3Code, region };
+        return country
       });
       return countryData;
     });
