@@ -11,7 +11,7 @@ const CountryStyled = styled.article`
   background-color: white;
 
   .image {
-    height: 150px;
+    height: 175px;
     background-size: cover;
     background-position: center;
     display: block;
@@ -21,6 +21,7 @@ const CountryStyled = styled.article`
 
 const CountryContentStyled = styled.div`
   padding: 15px;
+  min-height: 180px;
 `;
 
 const Country = ({ name, capital, population, flag, region }) => {
