@@ -8,12 +8,10 @@ const HeaderStyled = styled.header`
   border-bottom: 1px solid #4d4d4d;
   box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.2);
   width: 100%;
-  .logo {
-    flex: 1;
-  }
   ul {
     list-style: none;
     display: flex;
+    margin-left: auto;
     li {
       padding: 0 10px;
     }

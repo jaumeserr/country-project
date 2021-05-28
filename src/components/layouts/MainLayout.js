@@ -15,7 +15,7 @@ const ContentStyled = styled.main`
 const MainLayout = ({ children }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <ContentStyled>{children}</ContentStyled>
       <Footer />
     </>
