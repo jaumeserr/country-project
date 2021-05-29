@@ -3,8 +3,15 @@ export default function getCountries() {
     .then((res) => res.json())
     .then((data) => {
       const countryData = data.map((country) => {
-        return country
+        return {
+          ...country,
+          isFavourite: false,
+        };
       });
+      console.log(
+        "🚀 ~ file: getCountries.js ~ line 11 ~ countryData ~ countryData",
+        countryData
+      );
       return countryData;
     });
 }
