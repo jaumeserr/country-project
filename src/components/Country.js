@@ -14,8 +14,6 @@ const CountryStyled = styled.article`
     height: 175px;
     background-size: cover;
     background-position: center;
-    display: block;
-    width: 100%;
   }
 `;
 

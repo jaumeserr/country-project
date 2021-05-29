@@ -14,6 +14,9 @@ const HeaderStyled = styled.header`
     margin-left: auto;
     li {
       padding: 0 10px;
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 `;
@@ -24,6 +27,7 @@ const HeaderWrapper = styled.div`
   height: 70px;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 20px;
   width: 100%;
 `;
 

@@ -10,6 +10,7 @@ const ContentStyled = styled.main`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
 `;
 
 const MainLayout = ({ children }) => {
