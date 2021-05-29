@@ -47,18 +47,34 @@ const HeartFillStyled = styled(HeartFill)`
 
 const Country = ({
   name,
-  capital,
-  population,
-  flag,
-  region,
   alpha3Code,
+  flag,
+  capital,
+  region,
+  population,
+  isFavourite
 }) => {
   const countryList = useSelector((state) => state.countryList);
-  const [fav, setFav] = useState(false)
+  const [favs, setFavs] = useState(countryList);
+
+  const saveToFavs = (codeletters) => {
+    const newFav = favs.map((item) => {
+      if (item.alpha3Code === codeletters) {
+        const updateItem = {
+          ...item,
+          isFavourite: !item.isFavourite,
+        };
+        return updateItem;
+      }
+      return item;
+    });
+    setFavs(newFav);
+  };
 
   return (
     <CountryStyled>
-      <button>Favs</button>
+      
+      <button onClick={() => saveToFavs(alpha3Code)}>Favs</button>
       <LinkStyled key={alpha3Code} to={`/country/${alpha3Code}`}>
         <div
           className="image"
