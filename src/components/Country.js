@@ -52,7 +52,7 @@ const Country = ({
   capital,
   region,
   population,
-  isFavourite
+  isFavourite,
 }) => {
   const countryList = useSelector((state) => state.countryList);
   const [favs, setFavs] = useState(countryList);
@@ -73,7 +73,6 @@ const Country = ({
 
   return (
     <CountryStyled>
-      
       <button onClick={() => saveToFavs(alpha3Code)}>Favs</button>
       <LinkStyled key={alpha3Code} to={`/country/${alpha3Code}`}>
         <div

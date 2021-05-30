@@ -8,10 +8,6 @@ export default function getCountries() {
           isFavourite: false,
         };
       });
-      console.log(
-        "🚀 ~ file: getCountries.js ~ line 11 ~ countryData ~ countryData",
-        countryData
-      );
       return countryData;
     });
 }
