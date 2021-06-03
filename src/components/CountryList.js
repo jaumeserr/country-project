@@ -15,7 +15,9 @@ const CountryList = () => {
   return (
     <>
       {countryList.length !== 0 ? (
-        countryList.map((country) => <Country {...country} />)
+        countryList.map((country, index) => (
+          <Country key={index} {...country} />
+        ))
       ) : (
         <div>Data not found</div>
       )}

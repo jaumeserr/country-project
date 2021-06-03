@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import LinkStyled from "./UI";
 import { Heart, HeartFill } from "styled-icons/bootstrap";
-import { useSelector } from "react-redux";
-import { useState } from "react";
 
 const CountryStyled = styled.article`
   border-radius: 10px;
@@ -14,6 +12,7 @@ const CountryStyled = styled.article`
   text-align: center;
   background-color: white;
   position: relative;
+  height: 355px;
 
   .image {
     height: 175px;
@@ -45,20 +44,9 @@ const HeartFillStyled = styled(HeartFill)`
   cursor: pointer;
 `;
 
-const Country = ({
-  name,
-  capital,
-  population,
-  flag,
-  region,
-  alpha3Code,
-}) => {
-  const countryList = useSelector((state) => state.countryList);
-  const [fav, setFav] = useState(false)
-
+const Country = ({ name, capital, population, flag, region, alpha3Code }) => {
   return (
     <CountryStyled>
-      <button>Favs</button>
       <LinkStyled key={alpha3Code} to={`/country/${alpha3Code}`}>
         <div
           className="image"

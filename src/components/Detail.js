@@ -20,8 +20,8 @@ const Detail = ({ match }) => {
         <p>{capital}</p>
         <img src={flag} alt={name} />
         <p>{population}</p>
-        {currencies.map(({name}) => (
-          <span>currency: {name}</span>
+        {currencies.map(({ name }, index) => (
+          <span key={index}>currency: {name}</span>
         ))}
       </div>
       <button onClick={handleGoBack}>Go back</button>
