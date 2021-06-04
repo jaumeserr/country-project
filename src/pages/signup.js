@@ -13,6 +13,10 @@ const SignUpPage = () => {
     console.log(formData);
   };
 
+  const handleChange = (id) => {
+    console.log(id)
+  }
+
   return (
     <div>
       <h1>SIGN UP</h1>

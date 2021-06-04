@@ -5,6 +5,19 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./reducer";
+import firebase from 'firebase/app';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDYG0eu1A2jLJRPoVrK-UWF7h5pula-FHI",
+  authDomain: "country-project-5dd9b.firebaseapp.com",
+  projectId: "country-project-5dd9b",
+  storageBucket: "country-project-5dd9b.appspot.com",
+  messagingSenderId: "590945751857",
+  appId: "1:590945751857:web:d3d6d55d4eb5871f47d610",
+  measurementId: "G-YCQBL49K6W"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const initialState = {
   countryList: [],
